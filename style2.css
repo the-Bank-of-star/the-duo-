@@ -3,8 +3,7 @@
     color: white;
     font-style: oblique;
     text-transform: capitalize;
-
-}
+font-weight: 600;}
 body {
   height: 100vh;
   background: linear-gradient(to right bottom, #872341, #22092cfb);
@@ -43,8 +42,23 @@ margin-top: 25px;
 
  }
  #account-demo{
+  margin: 25px;
+  background-color: white;
+  border-radius: 15px;
+
+ }
+ #account-demo > p ,#account-demo > label,#account-demo >  input{
      /* background-color: ; */
      width: 320px;
-     color: rgb(126, 10, 10);
+     color: black;
+     text-align: center;
+     
+     margin:  30px 00px;
+     align-items: center;
+    justify-content: center;
+    }
+   
+    #account-demo > label,#account-demo >  input{
+  /* width: 162px; */
  }
  
