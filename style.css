@@ -1,39 +1,70 @@
-*{
-    font-family: "Hedvig Letters Serif", serif;
-  font-family: "Iceberg", sans-serif;
-}
-
-#bottom{
-    background-color:#F05941 ;
-    width: 70px;
-    height: 20px;
-}
-a{
-    color:  white;
-    text-decoration: none;
-    margin: 10px;
-
-
-}
-label,
-input,
-form {
-  display: block;
-}
-label,
-input,
-form,
-h1 {
+* {
+  font-family: "Orbitron", sans-serif;
   color: white;
-  text-align: center;
 }
 body {
-  
-  /* font: 400 1.6rem/1.5 "Nunito", sans-serif; */
-  height: 100vh;
-  color: #333;
-  background: linear-gradient(to right bottom, #872341, #22092c);
+/* font: 400 1.6rem/1.5 "Nunito", sans-serif; */
+height: 100vh;
+background: linear-gradient(to right bottom, #872341, #22092cfb);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#log-in {
+position: relative;
+width: 35rem;
+height: 30rem;
+background: #22092cbb;
+box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+
+input  {
+background-color: #be31447c;
+height: 45px;
+width: 300px;
+margin: 15px;
+border: none;
+text-align: center;
+}
+input,
+a,label {
+  font-weight: 700;
+font-size: 17px;
+border-radius: 9px;
+}
+#bottom {
+border-radius: 9px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #BE3144;
+width: 100px;
+height: 40px;
+position: absolute;
+left:35%;
+top:110%;
+}
+a {
+text-align: center;
+
+text-decoration: none;
+margin: 10px;
+}
+label{
+margin-top: 10px; }
+
+label,
+#bottom,
+h1 {
   display: flex;
-  align-items: center;
-  justify-content: center;
+text-align: center;
+align-items: center;
+justify-content: center;
+}
+
+form {
+  position: absolute;
+  left: 20%;
 }

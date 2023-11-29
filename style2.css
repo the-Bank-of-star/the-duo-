@@ -1,0 +1,50 @@
+* {
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    font-style: oblique;
+    text-transform: capitalize;
+
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to right bottom, #872341, #22092cfb);
+}
+#all{
+    display: flex;
+}
+form, #make-account{
+    width: 320px;
+}
+  input  {
+    background-color: #be31447c;
+    height: 45px;
+    width: 300px;
+    margin: 15px;
+    border: none;
+    text-align: center;
+  }
+  input , label{
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  input{
+margin: 0px;
+  }
+  label{
+    margin-top: 17px;
+  }
+
+ #aa{
+margin-top: 25px;
+    justify-content: center;
+
+ }
+ #account-demo{
+     /* background-color: ; */
+     width: 320px;
+     color: rgb(126, 10, 10);
+ }
+ 
