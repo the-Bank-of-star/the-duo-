@@ -1,0 +1,39 @@
+*{
+    font-family: "Hedvig Letters Serif", serif;
+  font-family: "Iceberg", sans-serif;
+}
+
+#bottom{
+    background-color:#F05941 ;
+    width: 70px;
+    height: 20px;
+}
+a{
+    color:  white;
+    text-decoration: none;
+    margin: 10px;
+
+
+}
+label,
+input,
+form {
+  display: block;
+}
+label,
+input,
+form,
+h1 {
+  color: white;
+  text-align: center;
+}
+body {
+  
+  /* font: 400 1.6rem/1.5 "Nunito", sans-serif; */
+  height: 100vh;
+  color: #333;
+  background: linear-gradient(to right bottom, #872341, #22092c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
