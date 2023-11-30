@@ -1,64 +1,79 @@
 * {
-    font-family: "Orbitron", sans-serif;
-    color: white;
-    font-style: oblique;
-    text-transform: capitalize;
-font-weight: 600;}
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  font-style: oblique;
+  text-transform: capitalize;
+  font-weight: 600;
+}
 body {
   height: 100vh;
   background: linear-gradient(to right bottom, #872341, #22092cfb);
 }
-#all{
-    display: flex;
+#all {
+  display: flex;
 }
-form, #make-account{
-    width: 320px;
+form,
+#make-account {
+  width: 320px;
 }
-  input  {
-    background-color: #be31447c;
-    height: 45px;
-    width: 300px;
-    margin: 15px;
-    border: none;
-    text-align: center;
-  }
-  input , label{
-    font-size: 15px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    /* justify-content: center; */
-  }
-  input{
-margin: 0px;
-  }
-  label{
-    margin-top: 17px;
-  }
+input {
+  background-color: #be31447c;
+  height: 45px;
+  width: 300px;
+  margin: 15px;
+  border: none;
+  text-align: center;
+}
+input,
+label {
+  font-size: 15px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  /* justify-content: center; */
+}
+input {
+  margin: 0px;
+}
+label {
+  margin-top: 17px;
+}
 
- #aa{
-margin-top: 25px;
-    justify-content: center;
+#aa {
+  margin-top: 25px;
+  justify-content: center;
+}
 
- }
- #account-demo{
+.account-demo {
   margin: 25px;
   background-color: white;
   border-radius: 15px;
+}
+.account-demo > p,
+.account-demo > label,
+.account-demo > input {
+  /* background-color: ; */
+  width: 320px;
+  color: black;
+  text-align: center;
 
- }
- #account-demo > p ,#account-demo > label,#account-demo >  input{
-     /* background-color: ; */
-     width: 320px;
-     color: black;
-     text-align: center;
-     
-     margin:  30px 00px;
-     align-items: center;
-    justify-content: center;
-    }
-   
-    #account-demo > label,#account-demo >  input{
+  margin: 30px 00px;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  border: none;
+  color: #22092c;
+  background-color: #f05941;
+  width: 150px;
+  height: 35px;
+}
+.account-demo > label,
+.account-demo > input {
   /* width: 162px; */
- }
- 
+}
