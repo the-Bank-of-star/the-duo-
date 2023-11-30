@@ -1,13 +1,13 @@
 //////////////// id genrater ///////////////////////
+var idsArray = [];
+
 function generateID() {
-  var count = 0;
+  var count = 1;
   return function () {
     return count++;
   };
 }
-function randInt(upperBound) { 
-  return Math.floor(Math.random() * (n + 1)) 
-  }
+
 id = generateID();
 
 var options = {
@@ -44,16 +44,15 @@ var transfer = function (amount) {
 };
 
 function clickii() {
-  let firstName = $("#fname").val()
-  let lastName = $("#lname").val()
-  let amount = Number($("#amount").val())
-  let date = $("#date").val()
-  let account = Acount(firstName, lastName, amount)
-  accounts.push(account)
-  console.log(accounts)
-  ////////////////////////////////////// display account /////////////////////////////////////
+  let firstName = $("#fname").val();
+  let lastName = $("#lname").val();
+  let amount = Number($("#amount").val());
+  let date = $("#date").val();
+  let account = Acount(firstName, lastName, amount);
+  accounts.push(account);
+  console.log(accounts);
   var new1 =
-    $(`<div class = "account" ><p>${account.firstname} ${account.lastname}</p><p> Amout :${account.solde}$</p><p id ="id" >account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
+    $(`<div ><p>${account.firstname} ${account.lastname}</p><p> Amout :${account.solde}$</p><p>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
         <input type="text" id="amount" name="lname" placeholder="enter your amount" />
         <p>Enter the account you want to send to</p>
         <input type="text" id="amount" name="lname" placeholder="the name of account" />
@@ -64,53 +63,57 @@ function clickii() {
 
 //////////////////////////////////////// array  of  accounts(objects) ////////////////////////////////////////////////////////
 var accounts = [];
-//   var account1=Acount("hechmi","bensassi",10000)
-//   var account2=Acount("aymen","slim",15000)
-//   console.log(account1)
-
-//    accounts.push(account1,account2)
-
 
 //////////////////////////////////////////function  add an account  ///////////////////////////////////////////
 
 function each(array, func) {
   for (var i = 0; i < array.length; i++) {
-    func(array[i], i)
+    func(array[i], i);
   }
 }
 
 function each_obj(obj, f) {
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      f(obj[key], key, obj)
+      f(obj[key], key, obj);
     }
   }
 }
 
 ////////////////////////////////// function virement ///////////////////////////////////
- 
-historique = []
-$("#send-button").click(function () {
+historique = [];
+let seend = function (arr) {
 
-  var amount = Number($("#send-amount").val())
+
+  var amount = Number($("#send-amount").val());
+  // console.log("amount", amount);
   var receiver_id = Number($("#receiver").val())
-  var sender_id =Number($().val())
+  var sender_id =Number()
   each(accounts, function (element, i) {
-    each(accounts, function (element2, i) {
-      if (element.id === receiver_id && element2.id === sender_id) {
-        element.receive(amount)
-        element2.transfer(amount)
-      }
-    })
-  })
+    if (receiver_id === element.id) {
+      element.receive(Number(amount))
+      // console.log("receiver element", element);
+
+      $(`#${receiver_id}`).text(element.solde)
+
+    }
+    if (sender_id === element.id) {
+      element.transfer(Number(amount))
+      // console.log("sender element", element);
+      $(`#${sender_id}`).text(element.solde)
+
+    }
+    console.log(accounts)
+
+  });
   historique.push({
     sender: sender_id,
     receiver: receiver_id,
     amount: amount,
-    virement_date: new Date().toLocaleString(),
-  })
-})
-
+    virement_date: new Date().toLocaleDateString(),
+  });
+}
+console.log(historique + "his")
 ///////////////////////////////////////////////////////////////////////////////////////////
 function filter(array, predicate) {
   var acc = [];
@@ -131,11 +134,11 @@ $().click(function () {
   each(historique, function (element, i) {
     console.log(
       "sender id : " +
-        element.sender_id +
-        " receiver id : " +
-        element.receiver_id +
-        " amount : " +
-        element.amount+" date"+element.virement_date
+      element.sender_id +
+      " receiver id : " +
+      element.receiver_id +
+      " amount : " +
+      element.amount
     );
   });
 });
@@ -143,8 +146,13 @@ $().click(function () {
 /////////////display specefic id ////////////////////
 $().click(function () {
   var id = $("#").val();
-  return filter(historique, function (element, i) {
-    return element.id === id
-  })
+  var filtred = filter(historique, function (element, i) {
+    return element.id === id;
+  });
 
-})
+  return filter(accounts, function (element, i) {
+    return element.id === id;
+  });
+});
+
+console.log();
