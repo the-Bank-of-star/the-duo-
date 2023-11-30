@@ -52,11 +52,13 @@ function clickii() {
   accounts.push(account);
   console.log(accounts);
   var new1 =
-    $(`<div ><p>${account.firstname} ${account.lastname}</p><p> Amout :${account.solde}$</p><p>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
-        <input type="text" id="amount" name="lname" placeholder="enter your amount" />
-        <p>Enter the account you want to send to</p>
-        <input type="text" id="amount" name="lname" placeholder="the name of account" />
-        <button>send money</button>
+    $(`<div class ="account-demo"  ><p>${account.firstname} ${account.lastname}</p><p id=${account.id}> Amout :${account.solde}$</p><p id=${account.id}>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
+        <input type="text" id="send-amount" name="lname" placeholder="enter your amount" />
+        <p>Enter The Id of receiver</p>
+        <input type="text" id="receiver" name="lname" placeholder="Enter the Account you want to send to" />
+        <p>Enter Your ID PLS</p>
+        <input type="text" id="sender_id" name="lname" placeholder="Enter Your ID PLS" />
+        <button  onclick="seend()">send money</button>
         </div>`);
   $("#all").append(new1)
 }
@@ -88,7 +90,11 @@ let seend = function (arr) {
   var amount = Number($("#send-amount").val());
   // console.log("amount", amount);
   var receiver_id = Number($("#receiver").val())
-  var sender_id =Number()
+  // console.log("receiver_id", receiver_id);
+
+  var sender_id = Number($("#sender_id").val())
+  // console.log("sender_id", sender_id);
+
   each(accounts, function (element, i) {
     if (receiver_id === element.id) {
       element.receive(Number(amount))
