@@ -15,18 +15,19 @@
     <div id="all">
       <div id="make-account">
       <h2>add new banck account</h2>
-      <form action="">
-        <label for="fname">First name:</label><br />
-        <input type="text" id="fname" name="fname" placeholder="Your name" />
-        <label for="lname">Last name:</label><br />
-        <input type="text" id="lname" name="lname" placeholder="Last name" />
-        <label for="lname">The amonut:</label><br />
-        <input type="text" id="lname" name="lname" placeholder="enter your amount" />
-        <label for="lname">Date:</label><br />
-        <input type="date"/>
-        <input type="submit" value="Enter"  id="aa"/>
-      </form>
+      
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" placeholder="Your name" />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" placeholder="Last name" />
+      <label for="lname">The amonut:</label><br />
+      <input type="number" id="amount" name="lname" placeholder="enter your amount" />
+      <label for="lname">Date:</label><br />
+      <input type="date"/>
+      <button onclick=clickii() >aaaaa</button>
+      
     </div>
+    
     <div  id="account-demo">
       <p>aymen slim </p>
       <p> Amout : 10000$</p>
@@ -34,10 +35,12 @@
       <p> the-date : 12/5/2020</p>
       <label for=""> send money babyy</label>
       <input type="text" id="amount" name="lname" placeholder="enter your amount" />
-      <input type="submit" value="send Baby ">
+      <p>Enter the account you want to send to</p>
+      <input type="text" id="amount" name="lname" placeholder="the name of account" />
+      <button>send money</button>
     </div>
     </div>
-
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="script.js"></script>
   </body>
 </html>
