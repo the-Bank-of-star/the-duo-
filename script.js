@@ -49,13 +49,13 @@ function clickii() {
   accounts.push(account);
   console.log(accounts);
   var new1 =
-    $(`<div><p>${account.firstname} ${account.lastname}</p><p> Amout :${account.solde}$</p><p>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
+    $(`<div class ="account-demo" ><p>${account.firstname} ${account.lastname}</p><p> Amout :${account.solde}$</p><p>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
         <input type="text" id="amount" name="lname" placeholder="enter your amount" />
-        <p>Enter the account you want to send to</p>
+        <p>Enter the Account you want to send to</p>
         <input type="text" id="amount" name="lname" placeholder="the name of account" />
         <button>send money</button>
         </div>`);
-  $("#all").append(new1);
+  $("#all").append(new1)
 }
 
 //////////////////////////////////////// array  of  accounts(objects) ////////////////////////////////////////////////////////

@@ -6,6 +6,8 @@
   font-weight: 600;
 }
 body {
+  width: 100vh;
+
   height: 100vh;
   background: linear-gradient(to right bottom, #872341, #22092cfb);
 }
@@ -52,7 +54,6 @@ label {
 .account-demo > p,
 .account-demo > label,
 .account-demo > input {
-  /* background-color: ; */
   width: 320px;
   color: black;
   text-align: center;
@@ -73,7 +74,16 @@ button {
   width: 150px;
   height: 35px;
 }
-.account-demo > label,
-.account-demo > input {
-  /* width: 162px; */
+.account-demo2 {
+  color: black;
+  background-color: white;
+  width: 200px;
+}
+td,
+th,
+table {
+  border: 3px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border-collapse: collapse;
 }
