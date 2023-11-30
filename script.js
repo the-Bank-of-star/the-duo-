@@ -27,7 +27,8 @@ function Acount(firstname, lastname, solde) {
   obj.date = new Date().toLocaleDateString();
   obj.transfer = transfer;
   obj.receive = receive;
-  return obj;
+  return obj
+
 }
 
 var receive = function (amount) {
@@ -52,7 +53,7 @@ function clickii() {
   console.log(accounts)
   ////////////////////////////////////// display account /////////////////////////////////////
   var new1 =
-    $(`<div ><p>${account.firstname} ${account.lastname}</p><p> Amout :${account.solde}$</p><p>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
+    $(`<div class = "account" ><p>${account.firstname} ${account.lastname}</p><p> Amout :${account.solde}$</p><p id ="id" >account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
         <input type="text" id="amount" name="lname" placeholder="enter your amount" />
         <p>Enter the account you want to send to</p>
         <input type="text" id="amount" name="lname" placeholder="the name of account" />
@@ -93,7 +94,7 @@ $("#send-button").click(function () {
 
   var amount = Number($("#send-amount").val())
   var receiver_id = Number($("#receiver").val())
-  var sender_id =Number()
+  var sender_id =Number($().val())
   each(accounts, function (element, i) {
     each(accounts, function (element2, i) {
       if (element.id === receiver_id && element2.id === sender_id) {
