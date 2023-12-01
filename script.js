@@ -52,13 +52,13 @@ function clickii() {
   accounts.push(account);
   console.log(accounts);
   var new1 =
-    $(`<div class ="account-demo"  ><p>${account.firstname} ${account.lastname}</p><p id=${account.id}> Amout :${account.solde}$</p><p id=${account.id}>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
-        <input type="text" id="send-amount" name="lname" placeholder="enter your amount" />
+    $(`<div class ="account-demo" id="account-demo-${account.id}"  ><p>${account.firstname} ${account.lastname}</p><p id=${account.id}> Amout :${account.solde}$</p><p id=${account.id}>account-id :${account.id}  </p><p> the-date : ${account.date}</p> <label > send money babyy</label>
+        <input type="text" id="send-amount-${account.id}" name="lname" placeholder="enter your amount" />
         <p>Enter The Id of receiver</p>
-        <input type="text" id="receiver" name="lname" placeholder="Enter the Account you want to send to" />
+        <input type="text" id="receiver-${account.id}" name="lname" placeholder="Enter the Account you want to send to" />
         <p>Enter Your ID PLS</p>
         <input type="text" id="sender_id" name="lname" placeholder="Enter Your ID PLS" />
-        <button   onclick="seend()">send money</button>
+        <button  onclick="seend()">send money</button>
         </div>`);
   $("#all").append(new1)
 }
@@ -87,42 +87,47 @@ historique = [];
 let seend = function (arr) {
 
 
-  var amount = Number($("#send-amount").val());
-  // console.log("amount", amount);
-  var receiver_id = Number($("#receiver").val())
-  // console.log("receiver_id", receiver_id);
-
-  var sender_id = Number($("#sender_id").val())
-  // console.log("sender_id", sender_id);
 
   each(accounts, function (element, i) {
-    if (receiver_id === element.id) {
-      element.receive(Number(amount))
-      // console.log("receiver element", element);
-
-      $(`#${receiver_id}`).text(element.solde)
-
-    }
+    var amount = Number($(`#send-amount-${element.id}`).val());
+    console.log("amount", amount);
+    var sender_id = Number($(`#sender_id-${element.id}`).val())
+    console.log("sender_id", sender_id);
     if (sender_id === element.id) {
       element.transfer(Number(amount))
-      // console.log("sender element", element);
+      console.log("sender element", element);
       $(`#${sender_id}`).text(element.solde)
+      each(accounts, function (element, i) {
+        var receiver_id = Number($(`#receiver-${element.id}`).val())
+        console.log("receiver_id", receiver_id);
+        if (receiver_id === element.id) {
+          element.receive(Number(amount))
+          console.log("receiver element", element);
+
+          $(`#${receiver_id}`).text(element.solde)
+          
+          return
+        }
+
+      })
 
     }
+
     console.log(accounts)
+
     console.log(accounts)
     
   });
   var history =$(`<tr><td>${sender_id}</td><td>${receiver_id}</td><td>${amount}</td><td>${new Date().toLocaleString()} </td></tr>`)
     $("#table").append(history)
 
-  
-  
+
+  });
   historique.push({
     sender: sender_id,
     receiver: receiver_id,
     amount: amount,
-    virement_date: new Date().toLocaleString()
+    virement_date: new Date().toLocaleDateString(),
   });
 }
 console.log(historique)
