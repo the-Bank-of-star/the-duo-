@@ -27,7 +27,8 @@ function Acount(firstname, lastname, solde) {
   obj.date = new Date().toLocaleDateString();
   obj.transfer = transfer;
   obj.receive = receive;
-  return obj;
+  return obj
+
 }
 
 var receive = function (amount) {
@@ -56,7 +57,7 @@ function clickii() {
         <p>Enter The Id of receiver</p>
         <input type="text" id="receiver-${account.id}" name="lname" placeholder="Enter the Account you want to send to" />
         <p>Enter Your ID PLS</p>
-        <input type="text" id="sender_id-${account.id}" name="lname" placeholder="Enter Your ID PLS" />
+        <input type="text" id="sender_id" name="lname" placeholder="Enter Your ID PLS" />
         <button  onclick="seend()">send money</button>
         </div>`);
   $("#all").append(new1)
@@ -114,10 +115,15 @@ let seend = function (arr) {
 
     console.log(accounts)
 
-   
+  });
+  historique.push({
+    sender: sender_id,
+    receiver: receiver_id,
+    amount: amount,
+    virement_date: new Date().toLocaleDateString(),
   });
 }
-console.log(historique + "his")
+console.log(historique)
 ///////////////////////////////////////////////////////////////////////////////////////////
 function filter(array, predicate) {
   var acc = [];
@@ -149,11 +155,6 @@ $().click(function () {
 
 /////////////display specefic id ////////////////////
 $().click(function () {
-  var id = $("#").val();
-  var filtred = filter(historique, function (element, i) {
-    return element.id === id;
-  });
-
   return filter(accounts, function (element, i) {
     return element.id === id;
   });
