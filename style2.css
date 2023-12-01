@@ -6,10 +6,15 @@
   font-weight: 600;
 }
 body {
-  width: 100vh;
+  width: 200vh;
 
-  height: 100vh;
+  height: 150vh;
   background: linear-gradient(to right bottom, #872341, #22092cfb);
+}
+h2{
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-size: 1.5em;
 }
 #all {
   display: flex;
@@ -38,7 +43,7 @@ input {
   margin: 0px;
 }
 label {
-  margin-top: 17px;
+  margin-top: 12px;
 }
 
 #aa {
@@ -73,17 +78,29 @@ button {
   background-color: #f05941;
   width: 150px;
   height: 35px;
+  margin-bottom: 5px;
 }
 .account-demo2 {
   color: black;
   background-color: white;
   width: 200px;
 }
+h2{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
 td,
 th,
 table {
-  border: 3px solid #dddddd;
+  font-weight: 400;
+  border: 5px solid #dddddd;
   text-align: left;
   padding: 8px;
   border-collapse: collapse;
+  width: 800px;
+}
+td,th{
+  align-items: center;
+  justify-content: center;
+text-align: center;
 }
