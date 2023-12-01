@@ -110,6 +110,7 @@ let seend = function (arr) {
 
     }
     console.log(accounts)
+    console.log(accounts)
     
   });
   var history =$(`<tr><td>${sender_id}</td><td>${receiver_id}</td><td>${amount}</td><td>${new Date().toLocaleString()} </td></tr>`)
